@@ -1,0 +1,17 @@
+<table style="width:50%" border="solid">
+  <tr>
+    <th>Song Name</th>
+    <th>Artist</th>
+    <th>Genre</th>
+  </tr>
+  <tr>
+    <td><%= @song.name %></td>
+    <td><%= link_to Artist.find(@song.artist_id).name, artist_path(@song.artist_id) %></td>
+    <td><%= link_to Genre.find(@song.genre_id).name, genre_path(@song.genre_id) %></td>
+  <tr>
+</table>
+
+<%= button_to "Edit Song", edit_song_path(@song), html_options = { :method => :get } %>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get } %>
+<%= button_to "List Artists", artists_path, html_options = { :method => :get } %>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get } %>
