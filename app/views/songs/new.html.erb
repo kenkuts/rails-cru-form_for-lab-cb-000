@@ -1,0 +1,19 @@
+<h1> Add Song </h1>
+
+<%= form_for @song do |f| %>
+    <%= f.label "Song Name" %>
+    <%= f.text_field :name %> 
+    <br>
+    <%= f.label "Artist Id:" %>
+    <%= f.text_field :artist_id %>
+    <!-- <%= f.collection_select(:artist_id, Artist.all, :id, :name ) %> --> 
+    <br>
+    <%= f.label "Genre Id:" %>
+    <%= f.text_field :genre_id %>
+    <br>
+    <%= f.submit "Create Song" %>
+<% end %>
+<br>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get} %>
+<%= button_to "List Artists", artists_path, html_options = { :method => :get} %>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get} %>

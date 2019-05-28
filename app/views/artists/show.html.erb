@@ -1,0 +1,7 @@
+<h1>Artist: <%= @artist.name %> </h1>
+<p>Bio: <%= @artist.bio %> </p>
+
+<%= button_to "Edit", edit_artist_path(@artist), html_options = { :method => :get} %>
+<%= button_to "List Artists", artists_path, html_options = { :method => :get }%>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get} %>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get} %>

@@ -1,0 +1,16 @@
+<h1>Update Artist</h1>
+<br>
+<%= form_for @artist do |f| %>
+    <%= f.label "Artist Name" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label "Bio" %>
+    <%= f.text_area :bio %>
+    <br>
+    <%= f.submit "Update Artist" %>
+<% end %>
+<br>
+<br>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get} %>
+<%= button_to "List Artists", artists_path, html_options = { :method => :get} %>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get} %>

@@ -1,0 +1,17 @@
+<h1> List of Artist </h1>
+
+<table style="width:40%" border="solid">
+    <tr>
+        <th>Artist Names</th>
+    </tr>
+    <% @artists.each do |artist| %>
+    <tr>
+        <td><%= link_to artist.name, artist_path(artist) %></td>
+    </tr>
+    <% end %>
+</table>
+<br>
+<%= button_to "Add New Artist", new_artist_path, html_options = { :method => :get} %>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get} %>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get} %>
+
