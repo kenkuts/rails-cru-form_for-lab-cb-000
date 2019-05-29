@@ -1,0 +1,13 @@
+<h1>Add Genres</h1>
+
+<%= form_for @genre do |f| %>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.submit "Create Genre" %>
+<% end %>
+<br>
+<br>
+<%= button_to "List Genres", genres_path, html_options = { :method => :get } %>
+<%= button_to "List Artist", artists_path, html_options = { :method => :get } %>
+<%= button_to "List Songs", songs_path, html_options = { :method => :get } %>

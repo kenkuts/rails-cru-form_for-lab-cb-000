@@ -2,24 +2,24 @@ class GenresController < ApplicationController
     before_action :set_genre, only: %i[ show edit update ]
 
     def index
-        @genres = Genre.all 
-    end 
+        @genres = Genre.all
+    end
 
     def show
-    end 
+    end
 
-    def new 
+    def new
         @genre = Genre.new
-    end 
+    end
 
     def create
         @genre = Genre.create(genre_params)
         redirect_to genre_path(@genre)
-    end 
+    end
 
     def edit
-    end 
-    
+    end
+
     def update
         @genre.update(genre_params)
         redirect_to genre_path(@genre)
@@ -32,6 +32,6 @@ class GenresController < ApplicationController
     end
 
     def genre_params
-        params.require(:genre).require(:name)
+        params.require(:genre).permit(:name)
     end
 end

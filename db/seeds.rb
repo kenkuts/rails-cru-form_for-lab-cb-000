@@ -16,7 +16,7 @@
 # lull.update(artist_id: cure.id, genre_id: new_wave.id)
 # trust.update(artist_id: cure.id, genre_id: new_wave.id)
 
-Artist.create(name: "311", bio:"cool")
+#Artist.create(name: "311", bio:"cool")
 Artist.create(name: "The Pixies", bio: "Boston, MA")
 Artist.create(name: "The Smiths", bio: "UK")
 Artist.create(name: "Coheed and Cambria", bio: "Nyack, NY")
